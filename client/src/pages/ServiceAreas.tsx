@@ -2,6 +2,7 @@ import { MapPin, Building2, Globe, Shield, Flag } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Section, SectionHeader } from "@/components/ui/section";
 import { PageMeta } from "@/components/seo/PageMeta";
+import GlobalOperationsMap from "@/components/GlobalOperationsMap";
 import { 
   usStates, 
   majorCities, 
@@ -39,6 +40,16 @@ export default function ServiceAreas() {
           </div>
         </div>
       </section>
+
+      {/* Interactive Global Map */}
+      <Section id="global-map">
+        <SectionHeader
+          subtitle="Global Presence"
+          title="Worldwide Operations"
+          description="Our headquarters in Washington, D.C. coordinates operations across the United States and strategic locations worldwide."
+        />
+        <GlobalOperationsMap />
+      </Section>
 
       {/* All 50 States */}
       <Section id="states">
