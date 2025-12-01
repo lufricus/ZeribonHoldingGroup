@@ -1,0 +1,350 @@
+Build a clean, sophisticated, government-grade website for “Zeribon Holding Group,” a veteran-led U.S. government contracting company. The design must be trustworthy, elegant, minimal, and highly professional. Use deep navy (#0A1A3E), federal blue (#051124), white (#FFFFFF), steel gray (#6F7A86), and silver (#DDE3EB). Use Montserrat for headings and Inter for body text. The layout must feel like a federal contractor: clean hero sections, large typography, disciplined spacing, and balanced white space.
+
+Top menu:
+HOME | ABOUT | CAPABILITIES | GOVERNMENT | PARTNERS | CONTACT
+
+Pages to generate (with SEO):
+– HOME (hero, credibility strip, services grid, global ops, real estate, IT, CTA)
+– ABOUT (company overview, leadership, certifications)
+– CAPABILITIES (all 10 capability areas)
+– GOVERNMENT (contracting, UEI/CAGE/NAICS, capability statement, vehicles)
+– PARTNERS (teaming, subcontractor onboarding, vendor registration)
+– CONTACT (full contact page)
+
+Tone:
+Government-grade, veteran-led, mission-focused, trustworthy, clean, and authentic.
+Content must read naturally, professionally, and be optimized for SEO and geo-SEO (USA + global).
+Include strong keywords related to government contracting, staffing, security, cleaning, logistics, IT supply, advisory, real estate, procurement, and global operations.                                                                                  SECTION 1 — Domain (Final Recommended)
+
+Your best, most government-ready and credible domain:
+
+⭐ ZeribonGroup.com
+
+Why it is the best:
+
+Clean
+
+Corporate
+
+Government-friendly
+
+Matches your legal entity
+
+Easy to pronounce and remember
+
+SEO-strong
+
+Works for future growth (global operations, real estate, security, IT, logistics)
+
+⭐ SECTION 2 — COLOR PALETTE (Government-Grade)
+
+These are elite, federal-grade, ultra-professional colors:
+
+PRIMARY COLORS
+
+Federal Blue (#0A1A3E)
+
+Deep Navy (#051124)
+
+SECONDARY COLORS
+
+Steel Gray (#6F7A86)
+
+Matte Black (#0D0D0D)
+
+ACCENTS
+
+Pure White (#FFFFFF)
+
+Silver Edge (#DDE3EB)
+
+Mission Gold (#C1A45A) (very light, used only for subtle accents)
+
+These colors create:
+✔ Trust
+✔ Power
+✔ Clean minimalism
+✔ Federal contractor visual identity
+✔ Corporate elegance
+
+⭐ SECTION 3 — FONTS (Federal + Luxury Minimalist)
+Headings
+Montserrat (Bold / Semi-Bold)
+
+Military-clean
+
+Executive
+
+High-trust
+
+Body Text
+Inter (Regular / Medium)
+
+Clean
+
+Easy to read
+
+Government-grade clarity
+
+⭐ SECTION 4 — HIGH-LEVEL MENU
+⭐ HOME | ABOUT | CAPABILITIES | GOVERNMENT | PARTNERS | CONTACT
+
+The cleanest, strongest, govt-friendly structure.
+
+⭐ SECTION 5 — FULL SUB-MENU STRUCTURE
+HOME
+ABOUT
+   – Company Overview
+   – Leadership
+   – Certifications & Compliance
+
+CAPABILITIES
+   – Advisory & Program Support
+   – Staffing & Recruiting
+   – Security Services
+   – Cleaning Services
+   – Global Cleaning Operations
+   – IT & Supply Solutions
+   – Real Estate & Property Management
+   – Logistics & Procurement
+   – Fleet & Vehicle Logistics
+   – Global Operations & Deployment
+
+GOVERNMENT
+   – Contracting & Procurement
+   – UEI / CAGE / NAICS
+   – Capability Statement (Web + PDF)
+   – Contract Vehicles
+   – Past Performance
+
+PARTNERS
+   – Teaming Opportunities
+   – Subcontractor Registration
+   – Vendor Onboarding
+   – Small Business Programs
+   – Strategic Alliances
+
+CONTACT
+
+⭐ SECTION 6 — FULL SEO-OPTIMIZED WEBSITE CONTENT
+
+Every page below is written to:
+
+✔ Rank on Google
+✔ Rank for government, federal, corporate, and B2B keywords
+✔ Rank for USA + global geographic searches
+✔ Sound authentic, trustworthy, and mission-focused
+✔ Attract federal contracting officers
+✔ Attract state + local agencies
+✔ Attract Fortune 500 subcontracting partners
+
+⭐ PAGE 1 — HOMEPAGE (SEO + Trust + Power)
+Hero Section
+
+Zeribon Holding Group
+Veteran-Led. Mission-Driven. Government-Ready.
+
+Delivering Advisory, Security, Staffing, Cleaning, IT Supply, Real Estate, Logistics, and Global Operations for U.S. Federal and State Agencies.
+
+Trusted. Disciplined. Operationally Proven.
+
+[Call To Action: Request Capabilities]
+[Call To Action: Become a Partner]
+
+Credibility Strip
+
+Veteran-Led
+
+SAM Registered
+
+UEI: ______
+
+CAGE: ______
+
+NAICS Certified
+
+U.S. & Global Operations
+
+Secure Facilities Ready
+
+Core Capabilities Grid
+
+Advisory & Program Support
+Federal operations, risk, finance, readiness.
+
+Security Services
+Protective services, access control, threat response.
+
+Staffing & Recruiting
+Cleared & uncleared personnel for federal missions.
+
+Cleaning Services
+Secure facility cleaning, base cleaning, government janitorial.
+
+Global Cleaning Operations
+Overseas bases, embassies, rapid deployment.
+
+IT & Supply Solutions
+Computers, telecom, tactical gear, uniforms, technology assets.
+
+Real Estate & Property Management
+Government housing, facility operations.
+
+Logistics & Procurement
+Vehicles, fleet sourcing, equipment, supply chain.
+
+Global Operations & Deployment
+International mission support across diverse environments.
+
+Who We Serve
+
+Federal Agencies
+State & Local Government
+Defense Contractors
+Prime Contractors
+Corporate Facilities
+International Agencies
+
+Founder Highlight
+
+Led by Arghoon Dar — U.S. Army Veteran (Special Operations), Former Tier-1 Investment Bank Officer, and Ivy League Trained Executive.
+
+A mission built to serve America with integrity, precision, and operational excellence.
+
+Final CTA
+
+Ready for mission success? Partner with a trusted veteran-led government contractor.
+
+[Request Proposal]
+[Download Capability Statement]
+
+⭐ PAGE 2 — ABOUT
+Company Overview
+
+Zeribon Holding Group is a U.S. veteran-led government contracting firm delivering mission-critical services across advisory, security, staffing, IT supply, cleaning, logistics, real estate, and global operations. Established in 2022, we support federal, state, and international agencies with integrity, discipline, and operational excellence. Our approach blends military precision with corporate strategy for measurable results.
+
+Leadership: Arghoon Dar
+
+Founder & Chief Executive Officer
+U.S. Army Special Forces Veteran
+Worked alongside Navy SEALs, Delta Force, Rangers, CIA, and FBI
+Former Tier-1 Investment Bank Officer (Wall Street)
+Cornell University Executive MBA (Ivy League)
+
+Arghoon Dar brings military discipline, Wall Street financial expertise, and global operational leadership — positioning Zeribon Holding Group as a trusted partner for government agencies and prime contractors.
+
+Certifications & Compliance
+
+Veteran-Owned
+
+SAM Registered
+
+UEI & CAGE
+
+NAICS Classification
+
+Global Operations Capability
+
+GSA Schedule (in progress or approved)
+
+⭐ PAGE 3 — CAPABILITIES
+
+(Each section below is short, powerful, and SEO rich.)
+
+✔ Advisory & Program Support
+
+Risk management, finance, compliance, operational strategy, program oversight.
+
+✔ Staffing & Recruiting
+
+Cleared and uncleared federal staffing, IT staffing, facility staffing, emergency deployment.
+
+✔ Security Services
+
+Protective services, patrol, access control, emergency response, secure facility management.
+
+✔ Cleaning Services
+
+Government janitorial, military base cleaning, federal secure facility cleaning, commercial cleaning.
+
+✔ Global Cleaning Operations
+
+Overseas base cleaning, embassy cleaning, humanitarian mission sanitation, rapid deployment.
+
+✔ IT & Supply Solutions
+
+Computers, servers, networking equipment, telecom, tactical uniforms, equipment supply.
+
+✔ Real Estate & Property Management
+
+Government housing, property oversight, base housing management, facility activation.
+
+✔ Logistics & Procurement
+
+Equipment sourcing, inventory management, warehouse management, procurement.
+
+✔ Fleet & Vehicle Logistics
+
+Government vehicles, tactical transport, supply vehicles, deployment support.
+
+✔ Global Operations & Deployment
+
+International field teams, onsite mission support, remote operations.
+
+⭐ PAGE 4 — GOVERNMENT
+✔ Contracting & Procurement
+
+How agencies contract with us.
+
+✔ UEI / CAGE / NAICS
+
+Full identifiers for federal verification.
+
+✔ Capability Statement
+
+Web version + PDF download.
+
+✔ Contract Vehicles
+
+BPA, IDIQ, open market, micro-purchase.
+
+✔ Past Performance
+
+Leadership-based past expertise + corporate capabilities.
+
+⭐ PAGE 5 — PARTNERS
+✔ Teaming Opportunities
+
+For primes and subcontractors.
+
+✔ Subcontractor Registration
+
+Online form.
+
+✔ Vendor Onboarding
+
+Required documents, W9, insurance, etc.
+
+✔ Small Business Programs
+
+SDVOSB, VOSB, MBE, WOSB, etc.
+
+✔ Strategic Alliances
+
+Long-term partners.
+
+⭐ PAGE 6 — CONTACT
+
+Contact form
+
+Email
+
+Phone
+
+Location
+
+RFP/RFQ submission
+
+Schedule a call
+
+                                                                                                                                                                             
