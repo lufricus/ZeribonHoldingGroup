@@ -11,6 +11,7 @@ A sophisticated government-grade website for Zeribon Holding Group, a veteran-le
 - **State Management**: TanStack React Query
 - **Backend**: Express.js
 - **Components**: Shadcn UI components
+- **PDF Generation**: jsPDF for capability statement downloads
 
 ## Color Palette
 - **Federal Blue**: #0A1A3E (Primary backgrounds, headers)
@@ -28,18 +29,33 @@ A sophisticated government-grade website for Zeribon Holding Group, a veteran-le
 1. **Home** (`/`) - Hero section, credibility strip, capabilities grid, founder highlight, CTAs
 2. **About** (`/about`) - Company overview, leadership, certifications
 3. **Capabilities** (`/capabilities`) - All 10 capability areas with detailed descriptions
-4. **Government** (`/government`) - Contracting info, UEI/CAGE/NAICS, capability statement, contract vehicles
+4. **Government** (`/government`) - Contracting info, UEI/CAGE/NAICS, capability statement with PDF download, contract vehicles
 5. **Partners** (`/partners`) - Teaming, subcontractor registration, vendor onboarding, partner registration form
 6. **Contact** (`/contact`) - Contact form, direct contact info, RFP/RFQ submission
-7. **Service Areas** (`/service-areas`) - Comprehensive geo-location coverage display
+7. **Service Areas** (`/service-areas`) - Interactive global operations map, comprehensive geo-location coverage display
+8. **Admin** (`/admin`) - Analytics dashboard, contact/partner submission management
 
 ## API Endpoints
 - `POST /api/contact` - Submit contact form inquiries
+- `GET /api/contact` - Get all contact submissions (admin)
 - `POST /api/partners` - Submit partner/vendor registrations
+- `GET /api/partners` - Get all partner registrations (admin)
+- `POST /api/analytics` - Track page views and user interactions
+- `GET /api/analytics/summary` - Get analytics summary for admin dashboard
 
 ## Data Models
 - **ContactSubmission**: Contact form submissions (name, email, phone, organization, subject, message)
 - **PartnerRegistration**: Partner/vendor registrations (company info, capabilities, certifications)
+- **AnalyticsEvent**: Page view and interaction tracking (sessionId, type, page, referrer, metadata)
+
+## Recent Updates
+- **PDF Capability Statement**: Downloadable PDF on Government page using jsPDF (client/src/lib/pdf-generator.ts)
+- **Interactive Global Map**: SVG-based world map on Service Areas page showing HQ and global operations (client/src/components/GlobalOperationsMap.tsx)
+- **Analytics Tracking**: Client-side analytics with page view tracking (client/src/lib/analytics.ts)
+- **Admin Dashboard**: View analytics, contact submissions, and partner registrations at /admin
+
+## Notes
+- Email notifications for form submissions require external email service integration (Resend/SendGrid) - not currently configured
 
 ## SEO Implementation
 
