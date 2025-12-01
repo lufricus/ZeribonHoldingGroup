@@ -51,8 +51,10 @@ export default function About() {
     <div>
       <PageMeta 
         title="About Us"
-        description="Learn about Zeribon Holding Group, a veteran-led government contracting firm delivering mission-critical services with integrity, discipline, and operational excellence."
-        keywords="veteran-owned business, government contractor, mission-critical services, federal contracting"
+        description="Learn about Zeribon Holding Group, a veteran-led government contracting firm delivering mission-critical services with integrity, discipline, and operational excellence across all 50 US states and global locations."
+        keywords="veteran-owned business, government contractor, mission-critical services, federal contracting, Arghoon Dar, CEO"
+        canonicalPath="/about"
+        page="about"
       />
       {/* Hero */}
       <section className="bg-deep-navy py-20 md:py-28">

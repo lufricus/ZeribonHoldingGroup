@@ -16,6 +16,7 @@ const footerLinks = {
   ],
   government: [
     { label: "Contracting Info", href: "/government#contracting" },
+    { label: "Service Areas", href: "/service-areas" },
     { label: "Capability Statement", href: "/government#capability-statement" },
     { label: "Contract Vehicles", href: "/government#vehicles" },
     { label: "SAM Registration", href: "/government#identifiers" },

@@ -114,8 +114,10 @@ export default function Contact() {
     <div>
       <PageMeta 
         title="Contact Us"
-        description="Contact Zeribon Holding Group for RFP/RFQ submissions, teaming inquiries, vendor registration, or general questions. Response within 24-48 business hours."
-        keywords="contact government contractor, RFP submission, RFQ submission, teaming inquiry, vendor registration"
+        description="Contact Zeribon Holding Group for RFP/RFQ submissions, teaming inquiries, vendor registration, capability statements, or general questions about government contracting services. Response within 24-48 business hours."
+        keywords="contact government contractor, RFP submission, RFQ submission, teaming inquiry, vendor registration, capability statement, Washington DC, federal contractor contact"
+        canonicalPath="/contact"
+        page="contact"
       />
       {/* Hero */}
       <section className="bg-deep-navy py-20 md:py-28">

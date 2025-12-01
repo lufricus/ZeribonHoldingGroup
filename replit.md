@@ -29,8 +29,9 @@ A sophisticated government-grade website for Zeribon Holding Group, a veteran-le
 2. **About** (`/about`) - Company overview, leadership, certifications
 3. **Capabilities** (`/capabilities`) - All 10 capability areas with detailed descriptions
 4. **Government** (`/government`) - Contracting info, UEI/CAGE/NAICS, capability statement, contract vehicles
-5. **Partners** (`/partners`) - Teaming, subcontractor registration, vendor onboarding
+5. **Partners** (`/partners`) - Teaming, subcontractor registration, vendor onboarding, partner registration form
 6. **Contact** (`/contact`) - Contact form, direct contact info, RFP/RFQ submission
+7. **Service Areas** (`/service-areas`) - Comprehensive geo-location coverage display
 
 ## API Endpoints
 - `POST /api/contact` - Submit contact form inquiries
@@ -40,6 +41,38 @@ A sophisticated government-grade website for Zeribon Holding Group, a veteran-le
 - **ContactSubmission**: Contact form submissions (name, email, phone, organization, subject, message)
 - **PartnerRegistration**: Partner/vendor registrations (company info, capabilities, certifications)
 
+## SEO Implementation
+
+### Comprehensive Geo-Targeting
+The website is optimized for SEO with comprehensive geo-location targeting:
+
+**Geographic Coverage:**
+- All 50 US states + DC + US territories
+- 80+ major metropolitan areas
+- Washington DC metro corridor focus
+
+**Federal Government Agencies:**
+- 15 Cabinet-level Executive Departments (DOD, DHS, VA, DOJ, etc.)
+- 30+ Independent Federal Agencies (GSA, NASA, EPA, FEMA, etc.)
+- All military branches and major commands
+
+**Military & Overseas:**
+- 30+ major domestic military installations
+- 35+ overseas military bases (Asia-Pacific, Europe, Middle East, Africa)
+- 48+ US embassies and consulates worldwide
+
+### SEO Components
+- **PageMeta** (`client/src/components/seo/PageMeta.tsx`): Per-page metadata with dynamic title, description, keywords, canonical URLs, Open Graph, and Twitter Cards
+- **StructuredData** (`client/src/components/seo/StructuredData.tsx`): Schema.org JSON-LD structured data (Organization, ProfessionalService, GovernmentService, LocalBusiness, Breadcrumbs)
+- **SEO Data Library** (`client/src/lib/seo-data.ts`): Comprehensive data arrays for states, cities, agencies, bases, and embassies
+
+### Meta Tags (index.html)
+- Comprehensive keywords covering all states, agencies, and services
+- Geo-location meta tags (geo.region, geo.position, ICBM)
+- Open Graph and Twitter Card tags
+- Robots directives for search engine indexing
+- Language and locale declarations
+
 ## Development
 - Run `npm run dev` to start the development server
 - Frontend runs on port 5000
@@ -47,9 +80,19 @@ A sophisticated government-grade website for Zeribon Holding Group, a veteran-le
 
 ## Key Features
 - Fully responsive design (mobile, tablet, desktop)
-- SEO-optimized with meta tags for government contracting keywords
+- Comprehensive SEO optimization for government contracting
+- Geo-targeting for all 50 states and global locations
 - Professional navigation with dropdown menus
 - Contact form with validation
+- Partner registration form with validation
 - Credibility strip displaying certifications
 - 10 capability area showcases
-- Partner/vendor registration pathways
+- Service Areas page with complete geographic coverage
+- Schema.org structured data for rich search results
+
+## User Preferences
+- Professional, government-grade aesthetic
+- Federal contractor color palette
+- Montserrat/Inter typography
+- Clean, minimal design
+- No emojis in UI

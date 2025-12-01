@@ -174,8 +174,10 @@ export default function Capabilities() {
     <div>
       <PageMeta 
         title="Capabilities"
-        description="Explore Zeribon Holding Group's ten core capability areas including advisory services, security, staffing, IT supply, cleaning, logistics, and global operations."
-        keywords="advisory services, security services, staffing, IT supply, cleaning services, logistics, fleet management, global operations"
+        description="Explore Zeribon Holding Group's ten core capability areas including advisory services, security, staffing, IT supply, cleaning, logistics, real estate, fleet management, and global operations for federal agencies nationwide."
+        keywords="advisory services, security services, staffing, IT supply, cleaning services, logistics, fleet management, global operations, real estate, property management, DOD, DHS, VA"
+        canonicalPath="/capabilities"
+        page="capabilities"
       />
       {/* Hero */}
       <section className="bg-deep-navy py-20 md:py-28">

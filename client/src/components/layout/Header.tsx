@@ -45,6 +45,7 @@ const navItems: NavItem[] = [
       { label: "UEI / CAGE / NAICS", href: "/government#identifiers" },
       { label: "Capability Statement", href: "/government#capability-statement" },
       { label: "Contract Vehicles", href: "/government#vehicles" },
+      { label: "Service Areas", href: "/service-areas", description: "All 50 states & global locations" },
       { label: "Past Performance", href: "/government#past-performance" },
     ],
   },

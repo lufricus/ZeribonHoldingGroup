@@ -115,8 +115,10 @@ export default function Partners() {
     <div>
       <PageMeta 
         title="Strategic Partners"
-        description="Join Zeribon Holding Group's network of trusted partners. Explore teaming opportunities, subcontractor registration, vendor onboarding, and small business programs for government contractors."
-        keywords="teaming opportunities, subcontractor registration, vendor onboarding, small business programs, SDVOSB, government contractor partnership"
+        description="Join Zeribon Holding Group's network of trusted partners. Explore teaming opportunities, subcontractor registration, vendor onboarding, and small business programs for government contractors serving federal, state, and local agencies nationwide."
+        keywords="teaming opportunities, subcontractor registration, vendor onboarding, small business programs, SDVOSB, VOSB, 8(a), WOSB, HUBZone, MBE, prime contractor, joint venture"
+        canonicalPath="/partners"
+        page="partners"
       />
       
       {/* Hero */}

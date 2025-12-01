@@ -97,8 +97,10 @@ export default function Home() {
     <div>
       <PageMeta 
         title="Home"
-        description="Zeribon Holding Group is a veteran-led government contractor delivering advisory, security, staffing, cleaning, IT supply, logistics, and global operations for federal agencies."
-        keywords="government contractor, veteran-owned, federal services, advisory, security, staffing, cleaning, IT supply, logistics"
+        description="Zeribon Holding Group is a veteran-led government contractor delivering advisory, security, staffing, cleaning, IT supply, logistics, and global operations for federal agencies across all 50 US states, military bases, and overseas embassies."
+        keywords="government contractor, veteran-owned, federal services, advisory, security, staffing, cleaning, IT supply, logistics, all 50 states, overseas bases, embassies"
+        canonicalPath="/"
+        page="home"
       />
       {/* Hero Section */}
       <section className="relative bg-deep-navy min-h-[90vh] flex items-center overflow-hidden" data-testid="section-hero">

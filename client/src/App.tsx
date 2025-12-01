@@ -10,6 +10,7 @@ import Capabilities from "@/pages/Capabilities";
 import Government from "@/pages/Government";
 import Partners from "@/pages/Partners";
 import Contact from "@/pages/Contact";
+import ServiceAreas from "@/pages/ServiceAreas";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -22,6 +23,7 @@ function Router() {
         <Route path="/government" component={Government} />
         <Route path="/partners" component={Partners} />
         <Route path="/contact" component={Contact} />
+        <Route path="/service-areas" component={ServiceAreas} />
         <Route component={NotFound} />
       </Switch>
     </Layout>

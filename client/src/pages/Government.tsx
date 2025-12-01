@@ -69,8 +69,10 @@ export default function Government() {
     <div>
       <PageMeta 
         title="Government Services"
-        description="Zeribon Holding Group is fully registered and compliant for federal, state, and local government contracting with UEI, CAGE code, and SAM registration."
-        keywords="government contracting, federal contractor, SAM registered, UEI, CAGE code, NAICS codes"
+        description="Zeribon Holding Group is fully registered and compliant for federal, state, and local government contracting across all 50 US states with UEI, CAGE code, SAM registration, and 10+ NAICS codes for DOD, DHS, VA, and all federal agencies."
+        keywords="government contracting, federal contractor, SAM registered, UEI, CAGE code, NAICS codes, GSA Schedule, IDIQ, BPA, set-aside, 8(a), SDVOSB, state government, local government"
+        canonicalPath="/government"
+        page="government"
       />
       {/* Hero */}
       <section className="bg-deep-navy py-20 md:py-28">
