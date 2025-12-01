@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Section, SectionHeader } from "@/components/ui/section";
 import { PageMeta } from "@/components/seo/PageMeta";
+import { generateCapabilityStatementPDF } from "@/lib/pdf-generator";
 
 const identifiers = [
   { label: "UEI Number", value: "Registered", description: "Unique Entity Identifier for federal contracting" },
@@ -233,7 +234,10 @@ export default function Government() {
             </ul>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button data-testid="button-download-capability">
+              <Button 
+                data-testid="button-download-capability"
+                onClick={() => generateCapabilityStatementPDF()}
+              >
                 <Download className="w-4 h-4 mr-2" />
                 Download PDF
               </Button>
