@@ -1,7 +1,7 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
-import { insertContactSchema, insertPartnerSchema } from "@shared/schema";
+import { insertContactSchema, insertPartnerSchema, insertAnalyticsSchema } from "@shared/schema";
 import { z } from "zod";
 
 export async function registerRoutes(
@@ -87,6 +87,53 @@ export async function registerRoutes(
       res.status(500).json({ 
         success: false, 
         message: "An error occurred while fetching registrations" 
+      });
+    }
+  });
+
+  // Analytics event tracking
+  app.post("/api/analytics", async (req, res) => {
+    try {
+      const validatedData = insertAnalyticsSchema.parse({
+        sessionId: req.body.sessionId,
+        type: req.body.type,
+        page: req.body.page,
+        referrer: req.body.referrer,
+        userAgent: req.body.userAgent,
+        screenWidth: req.body.screenWidth?.toString(),
+        screenHeight: req.body.screenHeight?.toString(),
+        metadata: req.body.metadata ? JSON.stringify(req.body.metadata) : null,
+      });
+      await storage.createAnalyticsEvent(validatedData);
+      res.status(201).json({ success: true });
+    } catch (error) {
+      if (error instanceof z.ZodError) {
+        console.error("Analytics validation error:", error.errors);
+        res.status(400).json({ 
+          success: false, 
+          message: "Validation error",
+          errors: error.errors 
+        });
+      } else {
+        console.error("Analytics tracking error:", error);
+        res.status(500).json({ 
+          success: false, 
+          message: "An error occurred while tracking event" 
+        });
+      }
+    }
+  });
+
+  // Get analytics summary (for admin dashboard)
+  app.get("/api/analytics/summary", async (req, res) => {
+    try {
+      const summary = await storage.getAnalyticsSummary();
+      res.json(summary);
+    } catch (error) {
+      console.error("Error fetching analytics:", error);
+      res.status(500).json({ 
+        success: false, 
+        message: "An error occurred while fetching analytics" 
       });
     }
   });

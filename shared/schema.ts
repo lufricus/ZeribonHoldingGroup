@@ -80,3 +80,25 @@ export const insertPartnerSchema = createInsertSchema(partnerRegistrations).omit
 
 export type InsertPartner = z.infer<typeof insertPartnerSchema>;
 export type PartnerRegistration = typeof partnerRegistrations.$inferSelect;
+
+// Analytics events
+export const analyticsEvents = pgTable("analytics_events", {
+  id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
+  sessionId: text("session_id").notNull(),
+  type: text("type").notNull(),
+  page: text("page").notNull(),
+  referrer: text("referrer"),
+  userAgent: text("user_agent"),
+  screenWidth: text("screen_width"),
+  screenHeight: text("screen_height"),
+  metadata: text("metadata"),
+  createdAt: timestamp("created_at").defaultNow(),
+});
+
+export const insertAnalyticsSchema = createInsertSchema(analyticsEvents).omit({
+  id: true,
+  createdAt: true,
+});
+
+export type InsertAnalytics = z.infer<typeof insertAnalyticsSchema>;
+export type AnalyticsEvent = typeof analyticsEvents.$inferSelect;
