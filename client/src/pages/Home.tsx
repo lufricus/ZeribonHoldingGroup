@@ -80,7 +80,6 @@ const credentials = [
   { icon: BadgeCheck, label: "UEI Verified" },
   { icon: Lock, label: "CAGE Certified" },
   { icon: Globe2, label: "U.S. & Global Operations" },
-  { icon: Shield, label: "Secure Facilities Ready" },
 ];
 
 const clientTypes = [
