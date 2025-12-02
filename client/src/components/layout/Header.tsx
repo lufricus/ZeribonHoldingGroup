@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, useLocation } from "wouter";
+import { useLocation } from "wouter";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -78,17 +78,15 @@ export function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" data-testid="link-home-logo">
-            <div className="flex items-center gap-3 cursor-pointer">
-              <div className="w-10 h-10 bg-mission-gold rounded-md flex items-center justify-center">
-                <span className="text-deep-navy font-heading font-bold text-lg">Z</span>
-              </div>
-              <div className="hidden sm:block">
-                <div className="text-white font-heading font-bold text-lg tracking-wide">ZERIBON</div>
-                <div className="text-steel-gray text-xs tracking-widest">HOLDING GROUP</div>
-              </div>
+          <a href="/" className="flex items-center gap-3 cursor-pointer" data-testid="link-home-logo">
+            <div className="w-10 h-10 bg-mission-gold rounded-md flex items-center justify-center">
+              <span className="text-deep-navy font-heading font-bold text-lg">Z</span>
             </div>
-          </Link>
+            <div className="hidden sm:block">
+              <div className="text-white font-heading font-bold text-lg tracking-wide">ZERIBON</div>
+              <div className="text-steel-gray text-xs tracking-widest">HOLDING GROUP</div>
+            </div>
+          </a>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-1" data-testid="nav-desktop">
@@ -99,25 +97,24 @@ export function Header() {
                 onMouseEnter={() => item.children && setActiveDropdown(item.label)}
                 onMouseLeave={() => setActiveDropdown(null)}
               >
-                <Link href={item.href}>
-                  <div
-                    className={cn(
-                      "flex items-center gap-1 px-4 py-2 text-sm font-medium transition-colors cursor-pointer rounded-md",
-                      isActive(item.href)
-                        ? "text-mission-gold"
-                        : "text-white/90 hover:text-mission-gold"
-                    )}
-                    data-testid={`nav-link-${item.label.toLowerCase()}`}
-                  >
-                    {item.label}
-                    {item.children && (
-                      <ChevronDown className={cn(
-                        "w-4 h-4 transition-transform",
-                        activeDropdown === item.label && "rotate-180"
-                      )} />
-                    )}
-                  </div>
-                </Link>
+                <a
+                  href={item.href}
+                  className={cn(
+                    "flex items-center gap-1 px-4 py-2 text-sm font-medium transition-colors cursor-pointer rounded-md",
+                    isActive(item.href)
+                      ? "text-mission-gold"
+                      : "text-white/90 hover:text-mission-gold"
+                  )}
+                  data-testid={`nav-link-${item.label.toLowerCase()}`}
+                >
+                  {item.label}
+                  {item.children && (
+                    <ChevronDown className={cn(
+                      "w-4 h-4 transition-transform",
+                      activeDropdown === item.label && "rotate-180"
+                    )} />
+                  )}
+                </a>
 
                 {/* Dropdown */}
                 {item.children && activeDropdown === item.label && (
@@ -148,11 +145,11 @@ export function Header() {
 
           {/* CTA Button */}
           <div className="hidden lg:block">
-            <Link href="/contact">
+            <a href="/contact">
               <Button data-testid="button-request-proposal">
                 Request Proposal
               </Button>
-            </Link>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -172,20 +169,19 @@ export function Header() {
           <nav className="max-w-7xl mx-auto px-4 py-4 space-y-1" data-testid="nav-mobile">
             {navItems.map((item) => (
               <div key={item.label}>
-                <Link href={item.href}>
-                  <div
-                    className={cn(
-                      "block px-4 py-3 text-sm font-medium rounded-md cursor-pointer",
-                      isActive(item.href)
-                        ? "text-mission-gold bg-federal-blue/20"
-                        : "text-white/90 hover:text-mission-gold hover:bg-federal-blue/10"
-                    )}
-                    onClick={() => !item.children && setMobileMenuOpen(false)}
-                    data-testid={`nav-mobile-${item.label.toLowerCase()}`}
-                  >
-                    {item.label}
-                  </div>
-                </Link>
+                <a
+                  href={item.href}
+                  className={cn(
+                    "block px-4 py-3 text-sm font-medium rounded-md cursor-pointer",
+                    isActive(item.href)
+                      ? "text-mission-gold bg-federal-blue/20"
+                      : "text-white/90 hover:text-mission-gold hover:bg-federal-blue/10"
+                  )}
+                  onClick={() => !item.children && setMobileMenuOpen(false)}
+                  data-testid={`nav-mobile-${item.label.toLowerCase()}`}
+                >
+                  {item.label}
+                </a>
                 {item.children && (
                   <div className="ml-4 mt-1 space-y-1 border-l-2 border-federal-blue/30 pl-4">
                     {item.children.map((child) => (
@@ -203,11 +199,11 @@ export function Header() {
               </div>
             ))}
             <div className="pt-4">
-              <Link href="/contact">
+              <a href="/contact">
                 <Button className="w-full" onClick={() => setMobileMenuOpen(false)}>
                   Request Proposal
                 </Button>
-              </Link>
+              </a>
             </div>
           </nav>
         </div>
