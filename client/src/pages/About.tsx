@@ -141,32 +141,38 @@ export default function About() {
                   <div className="flex items-start gap-3">
                     <Shield className="w-5 h-5 text-mission-gold mt-0.5 shrink-0" />
                     <div>
-                      <p className="text-white font-medium">U.S. Army Special Forces Veteran</p>
-                      <p className="text-steel-gray text-sm">Worked alongside Navy SEALs, Delta Force, Rangers, CIA, and FBI</p>
+                      <p className="text-white font-medium">U.S. Army Veteran — Special Operations Command</p>
+                      <p className="text-steel-gray text-sm">Served within U.S. European Command (EUCOM), Special Operations Command Europe (SOCEUR), and 1st Special Forces Group (Airborne)</p>
+                      <p className="text-steel-gray text-sm mt-1">Supported mission-critical operations and served alongside Navy SEALs, Delta Force, Rangers, CIA, and FBI</p>
+                      <p className="text-steel-gray text-sm mt-1">Previously held Top Secret / SCI security clearance</p>
                     </div>
                   </div>
                   
                   <div className="flex items-start gap-3">
                     <Building2 className="w-5 h-5 text-mission-gold mt-0.5 shrink-0" />
                     <div>
-                      <p className="text-white font-medium">Former Tier-1 Investment Bank Officer</p>
-                      <p className="text-steel-gray text-sm">Wall Street experience in strategic finance and operations</p>
+                      <p className="text-white font-medium">Senior Finance Officer — Wall Street</p>
+                      <p className="text-steel-gray text-sm">Tier-1 investment bank experience in strategic finance, operations, and high-stakes decision-making</p>
                     </div>
                   </div>
                   
                   <div className="flex items-start gap-3">
                     <Award className="w-5 h-5 text-mission-gold mt-0.5 shrink-0" />
                     <div>
-                      <p className="text-white font-medium">Cornell University Executive MBA</p>
-                      <p className="text-steel-gray text-sm">Ivy League trained in strategic leadership and management</p>
+                      <p className="text-white font-medium">Executive MBA — Cornell University</p>
+                      <p className="text-steel-gray text-sm">Ivy League education in strategic leadership, management, and organizational excellence</p>
                     </div>
                   </div>
                 </div>
                 
-                <p className="text-steel-gray leading-relaxed">
-                  Arghoon Dar brings military discipline, Wall Street financial expertise, and global 
-                  operational leadership — positioning Zeribon Holding Group as a trusted partner 
-                  for government agencies and prime contractors across the nation and worldwide.
+                <p className="text-steel-gray leading-relaxed mb-4">
+                  Arghoon Dar brings military discipline, operational precision, and Wall Street financial expertise to every mission. 
+                  His background in special operations, coupled with senior-level corporate finance experience and Ivy League training, 
+                  positions Zeribon Holding Group as a trusted partner for government agencies and prime contractors across the nation and worldwide.
+                </p>
+                
+                <p className="text-mission-gold italic text-sm border-l-2 border-mission-gold pl-4">
+                  "A mission built to serve America with integrity, precision, and operational excellence."
                 </p>
               </div>
             </div>
