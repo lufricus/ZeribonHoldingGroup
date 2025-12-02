@@ -123,7 +123,12 @@ export function Header() {
                 {item.children && activeDropdown === item.label && (
                   <div className="absolute top-full left-0 mt-1 w-64 bg-deep-navy border border-federal-blue/50 rounded-md shadow-xl py-2 animate-fade-in">
                     {item.children.map((child) => (
-                      <Link key={child.href} href={child.href}>
+                      <a 
+                        key={child.href} 
+                        href={child.href}
+                        className="block"
+                        onClick={() => setActiveDropdown(null)}
+                      >
                         <div
                           className="px-4 py-2.5 text-sm text-white/80 hover:text-mission-gold hover:bg-federal-blue/30 transition-colors cursor-pointer"
                           data-testid={`nav-dropdown-${child.label.toLowerCase().replace(/\s+/g, "-")}`}
@@ -133,7 +138,7 @@ export function Header() {
                             <p className="text-xs text-steel-gray mt-0.5">{child.description}</p>
                           )}
                         </div>
-                      </Link>
+                      </a>
                     ))}
                   </div>
                 )}
@@ -184,14 +189,14 @@ export function Header() {
                 {item.children && (
                   <div className="ml-4 mt-1 space-y-1 border-l-2 border-federal-blue/30 pl-4">
                     {item.children.map((child) => (
-                      <Link key={child.href} href={child.href}>
-                        <div
-                          className="block py-2 text-sm text-white/70 hover:text-mission-gold transition-colors cursor-pointer"
-                          onClick={() => setMobileMenuOpen(false)}
-                        >
-                          {child.label}
-                        </div>
-                      </Link>
+                      <a 
+                        key={child.href} 
+                        href={child.href}
+                        className="block py-2 text-sm text-white/70 hover:text-mission-gold transition-colors cursor-pointer"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        {child.label}
+                      </a>
                     ))}
                   </div>
                 )}
