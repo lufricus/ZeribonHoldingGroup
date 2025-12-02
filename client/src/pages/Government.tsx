@@ -256,7 +256,7 @@ export default function Government() {
                   <div className="flex items-center justify-center gap-2 mb-4">
                     <Globe className="w-6 h-6 text-mission-gold" />
                     <div className="flex flex-col leading-tight">
-                      <div className="text-white font-heading font-bold text-sm tracking-wider">ZERIBON</div>
+                      <div className="text-black font-heading font-bold text-sm tracking-wider">ZERIBON</div>
                       <div className="text-mission-gold font-heading font-semibold text-xs tracking-widest">HOLDING GROUP</div>
                     </div>
                   </div>
