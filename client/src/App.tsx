@@ -25,24 +25,34 @@ function AnalyticsTracker() {
   
   useEffect(() => {
     analytics.trackPageView(location);
-    
-    // Extract hash from location
-    const hashMatch = location.match(/#(.+)$/);
-    const hash = hashMatch ? hashMatch[1] : null;
-    
-    if (hash) {
-      // If there's a hash, wait a bit for page to render, then scroll to element
-      setTimeout(() => {
-        const element = document.getElementById(hash);
-        if (element) {
-          element.scrollIntoView({ behavior: "smooth", block: "start" });
-        }
-      }, 100);
-    } else {
-      // No hash, scroll to top
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
   }, [location]);
+  
+  // Handle hash-based navigation
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash.slice(1); // Remove '#' prefix
+      
+      if (hash) {
+        // If there's a hash, wait for page to render, then scroll to element
+        setTimeout(() => {
+          const element = document.getElementById(hash);
+          if (element) {
+            element.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+        }, 100);
+      } else {
+        // No hash, scroll to top
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    };
+    
+    // Call on component mount to handle initial hash
+    handleHashChange();
+    
+    // Listen for hash changes
+    window.addEventListener("hashchange", handleHashChange);
+    return () => window.removeEventListener("hashchange", handleHashChange);
+  }, []);
   
   return null;
 }
