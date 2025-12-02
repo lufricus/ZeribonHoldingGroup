@@ -97,28 +97,28 @@ export function generateCapabilityStatementPDF(data: CapabilityStatementData = d
   doc.setFillColor(FEDERAL_BLUE);
   doc.rect(0, 0, pageWidth, 35, "F");
 
-  // Logo - Globe circle
-  const logoX = pageWidth / 2 - 25;
-  const logoY = 8;
+  // Logo - Globe circle (larger, left-aligned)
+  const logoX = margin + 5;
+  const logoY = 10;
   doc.setFillColor(MISSION_GOLD);
-  doc.circle(logoX, logoY, 3, "F");
+  doc.circle(logoX, logoY, 4, "F");
 
-  // Company name and tagline next to logo
+  // Company name and tagline next to logo (larger)
   doc.setTextColor(WHITE);
-  doc.setFontSize(14);
+  doc.setFontSize(16);
   doc.setFont("helvetica", "bold");
-  doc.text("ZERIBON", logoX + 8, logoY - 1);
+  doc.text("ZERIBON", logoX + 10, logoY - 1);
 
-  doc.setFontSize(7);
+  doc.setFontSize(8);
   doc.setFont("helvetica", "semibold");
   doc.setTextColor(MISSION_GOLD);
-  doc.text("HOLDING GROUP", logoX + 8, logoY + 2.5);
+  doc.text("HOLDING GROUP", logoX + 10, logoY + 2.5);
 
   // Tagline below
   doc.setFontSize(9);
   doc.setFont("helvetica", "normal");
   doc.setTextColor(MISSION_GOLD);
-  doc.text(data.tagline, pageWidth / 2, 27, { align: "center" });
+  doc.text(data.tagline, pageWidth / 2, 28, { align: "center" });
 
   // Title bar
   doc.setFillColor(MISSION_GOLD);
