@@ -79,7 +79,10 @@ export function Header() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <a href="/" className="flex items-center cursor-pointer" data-testid="link-home-logo">
-            <div className="text-white font-heading font-bold text-2xl tracking-wide">ZERIBON</div>
+            <div className="flex flex-col">
+              <div className="text-white font-heading font-bold text-2xl tracking-wide">ZERIBON</div>
+              <div className="h-1 bg-mission-gold rounded-full w-full" />
+            </div>
           </a>
 
           {/* Desktop Navigation */}
