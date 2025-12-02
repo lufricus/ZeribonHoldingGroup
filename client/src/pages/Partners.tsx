@@ -248,7 +248,7 @@ export default function Partners() {
                               <Input 
                                 placeholder="Your Company Name" 
                                 {...field}
-                                className="bg-federal-blue/50 border-federal-blue text-white placeholder:text-steel-gray"
+                                className="bg-white border-gray-300 text-gray-900 placeholder:text-gray-500"
                                 data-testid="input-company-name"
                               />
                             </FormControl>
@@ -267,7 +267,7 @@ export default function Partners() {
                               <Input 
                                 placeholder="Primary Contact" 
                                 {...field}
-                                className="bg-federal-blue/50 border-federal-blue text-white placeholder:text-steel-gray"
+                                className="bg-white border-gray-300 text-gray-900 placeholder:text-gray-500"
                                 data-testid="input-contact-name"
                               />
                             </FormControl>
@@ -289,7 +289,7 @@ export default function Partners() {
                                 type="email" 
                                 placeholder="email@company.com" 
                                 {...field}
-                                className="bg-federal-blue/50 border-federal-blue text-white placeholder:text-steel-gray"
+                                className="bg-white border-gray-300 text-gray-900 placeholder:text-gray-500"
                                 data-testid="input-partner-email"
                               />
                             </FormControl>
@@ -309,7 +309,7 @@ export default function Partners() {
                                 type="tel" 
                                 placeholder="(555) 123-4567" 
                                 {...field}
-                                className="bg-federal-blue/50 border-federal-blue text-white placeholder:text-steel-gray"
+                                className="bg-white border-gray-300 text-gray-900 placeholder:text-gray-500"
                                 data-testid="input-partner-phone"
                               />
                             </FormControl>
@@ -328,7 +328,7 @@ export default function Partners() {
                           <Select onValueChange={field.onChange} value={field.value}>
                             <FormControl>
                               <SelectTrigger 
-                                className="bg-federal-blue/50 border-federal-blue text-white"
+                                className="bg-white border-gray-300 text-gray-900"
                                 data-testid="select-registration-type"
                               >
                                 <SelectValue placeholder="Select registration type" />
@@ -363,7 +363,7 @@ export default function Partners() {
                               rows={3}
                               {...field}
                               value={field.value ?? ""}
-                              className="bg-federal-blue/50 border-federal-blue text-white placeholder:text-steel-gray"
+                              className="bg-white border-gray-300 text-gray-900 placeholder:text-gray-500"
                               data-testid="input-capabilities"
                             />
                           </FormControl>
@@ -384,7 +384,7 @@ export default function Partners() {
                                 placeholder="e.g., SDVOSB, WOSB, 8(a)" 
                                 {...field}
                                 value={field.value ?? ""}
-                                className="bg-federal-blue/50 border-federal-blue text-white placeholder:text-steel-gray"
+                                className="bg-white border-gray-300 text-gray-900 placeholder:text-gray-500"
                                 data-testid="input-certifications"
                               />
                             </FormControl>
@@ -404,7 +404,7 @@ export default function Partners() {
                                 placeholder="e.g., 541611, 561210" 
                                 {...field}
                                 value={field.value ?? ""}
-                                className="bg-federal-blue/50 border-federal-blue text-white placeholder:text-steel-gray"
+                                className="bg-white border-gray-300 text-gray-900 placeholder:text-gray-500"
                                 data-testid="input-naics-codes"
                               />
                             </FormControl>
@@ -426,7 +426,7 @@ export default function Partners() {
                               rows={4}
                               {...field}
                               value={field.value ?? ""}
-                              className="bg-federal-blue/50 border-federal-blue text-white placeholder:text-steel-gray"
+                              className="bg-white border-gray-300 text-gray-900 placeholder:text-gray-500"
                               data-testid="input-partner-message"
                             />
                           </FormControl>
