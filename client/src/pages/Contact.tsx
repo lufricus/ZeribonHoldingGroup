@@ -3,7 +3,7 @@ import { useMutation } from "@tanstack/react-query";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { 
-  Mail, Phone, MapPin, Clock, Send, CheckCircle,
+  Mail, MapPin, Clock, Send, CheckCircle,
   FileText, Users, Briefcase
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -363,26 +363,6 @@ export default function Contact() {
                         data-testid="link-contact-email"
                       >
                         contact@zeribongroup.com
-                      </a>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-              
-              <Card data-testid="card-contact-phone">
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 bg-mission-gold/10 rounded-md flex items-center justify-center shrink-0">
-                      <Phone className="w-5 h-5 text-mission-gold" />
-                    </div>
-                    <div>
-                      <h3 className="font-heading font-semibold mb-1">Phone</h3>
-                      <a 
-                        href="tel:+1-000-000-0000" 
-                        className="text-muted-foreground hover:text-mission-gold transition-colors"
-                        data-testid="link-contact-phone"
-                      >
-                        (000) 000-0000
                       </a>
                     </div>
                   </div>
