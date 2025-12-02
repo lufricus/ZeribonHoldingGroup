@@ -25,6 +25,8 @@ function AnalyticsTracker() {
   
   useEffect(() => {
     analytics.trackPageView(location);
+    // Scroll to top on route change
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }, [location]);
   
   return null;
