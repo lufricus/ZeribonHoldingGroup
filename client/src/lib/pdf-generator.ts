@@ -97,24 +97,26 @@ export function generateCapabilityStatementPDF(data: CapabilityStatementData = d
   doc.setFillColor(FEDERAL_BLUE);
   doc.rect(0, 0, pageWidth, 35, "F");
 
-  // Logo - Simple globe matching website icon (larger, left-aligned)
+  // Logo - Clean minimal globe matching lucide-react website icon
   const logoX = margin + 3;
   const logoY = 11;
   const globeRadius = 4.5;
   
-  // Draw globe circle outline in Mission Gold
+  // Draw main circle outline
   doc.setDrawColor(MISSION_GOLD);
-  doc.setLineWidth(0.6);
+  doc.setLineWidth(0.5);
   doc.circle(logoX, logoY, globeRadius, "S");
   
-  // Draw vertical meridian line
+  // Draw two curved lines for globe effect (simple and minimal like lucide icon)
+  doc.setDrawColor(MISSION_GOLD);
+  doc.setLineWidth(0.5);
+  
+  // Vertical center line
   doc.line(logoX, logoY - globeRadius, logoX, logoY + globeRadius);
   
-  // Draw horizontal latitude line (equator)
-  doc.ellipse(logoX, logoY, globeRadius, globeRadius * 0.5, "S");
-  
-  // Draw another latitude line for detail
-  doc.ellipse(logoX, logoY, globeRadius * 0.8, globeRadius * 0.25, "S");
+  // Curved horizontal line (simplified)
+  doc.ellipse(logoX, logoY - 1.5, globeRadius * 0.7, globeRadius * 0.4, "S");
+  doc.ellipse(logoX, logoY + 1.5, globeRadius * 0.7, globeRadius * 0.4, "S");
 
   // Company name and tagline next to logo (much larger, matching website)
   doc.setTextColor(WHITE);
