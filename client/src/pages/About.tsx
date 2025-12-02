@@ -127,7 +127,7 @@ export default function About() {
         <div className="max-w-3xl mx-auto">
           <div className="bg-federal-blue/30 border border-federal-blue/50 rounded-lg p-8 md:p-12">
             <p className="text-white text-lg leading-relaxed font-medium">
-              "Zeribon Holding Group was created to serve America with integrity, precision, and operational excellence. Built on the principles of military discipline, financial expertise, and global operational leadership, the mission is simple — deliver solutions that meet the highest federal standards and support agencies that protect and strengthen this nation."
+              "Zeribon Holding Group was created to serve America with integrity, precision, and operational excellence. Built on the principles of military discipline, financial expertise, and global operational leadership, the mission is simple: deliver solutions that meet the highest federal standards and support agencies that protect and strengthen this nation."
             </p>
           </div>
         </div>
