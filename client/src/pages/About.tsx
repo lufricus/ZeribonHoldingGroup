@@ -40,10 +40,11 @@ const certifications = [
 ];
 
 const timeline = [
-  { year: "2022", event: "Company Founded", description: "Zeribon Holding Group established with a mission to serve America" },
-  { year: "2022", event: "SAM Registration", description: "Completed federal registration and compliance requirements" },
-  { year: "2023", event: "First Federal Contract", description: "Awarded initial government contracts for advisory services" },
-  { year: "2024", event: "Global Expansion", description: "Extended operations to support international missions" },
+  { year: "2022", event: "Company Founded", description: "Zeribon Holding Group established with a mission to serve America." },
+  { year: "2022", event: "SAM Registration", description: "Completed federal registration, eligibility, and compliance requirements." },
+  { year: "2023", event: "Federal Readiness Milestones", description: "Developed core capabilities, built government partnerships, and completed all required SAM, UEI, NAICS, and compliance frameworks to pursue federal contracts." },
+  { year: "2024", event: "Operational Expansion", description: "Expanded service offerings, strengthened government-facing infrastructure, and prepared for federal, state, and defense-sector opportunities." },
+  { year: "2025", event: "Contract Pursuit Phase", description: "Actively pursuing federal, defense, intelligence, and state-level contracts with a full capability statement, compliant infrastructure, and mission-ready operations." },
 ];
 
 export default function About() {
