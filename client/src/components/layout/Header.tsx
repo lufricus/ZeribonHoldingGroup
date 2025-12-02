@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useLocation } from "wouter";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -78,7 +78,8 @@ export function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <a href="/" className="flex items-center cursor-pointer" data-testid="link-home-logo">
+          <a href="/" className="flex items-center gap-2 cursor-pointer" data-testid="link-home-logo">
+            <Globe className="w-6 h-6 text-mission-gold" />
             <div className="flex flex-col leading-tight">
               <div className="text-white font-heading font-bold text-xl tracking-wider">ZERIBON</div>
               <div className="text-mission-gold font-heading font-semibold text-xs tracking-widest">HOLDING GROUP</div>
