@@ -122,7 +122,6 @@ export function Header() {
                         key={child.href} 
                         href={child.href}
                         className="block"
-                        onClick={() => setActiveDropdown(null)}
                       >
                         <div
                           className="px-4 py-2.5 text-sm text-white/80 hover:text-mission-gold hover:bg-federal-blue/30 transition-colors cursor-pointer"
