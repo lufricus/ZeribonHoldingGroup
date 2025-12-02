@@ -97,11 +97,28 @@ export function generateCapabilityStatementPDF(data: CapabilityStatementData = d
   doc.setFillColor(FEDERAL_BLUE);
   doc.rect(0, 0, pageWidth, 35, "F");
 
-  // Logo - Globe circle (larger, left-aligned)
+  // Logo - Globe with stylized look (larger, left-aligned)
   const logoX = margin + 3;
   const logoY = 11;
+  const globeRadius = 4.5;
+  
+  // Draw globe circle outline
+  doc.setDrawColor(MISSION_GOLD);
+  doc.setLineWidth(0.5);
+  doc.circle(logoX, logoY, globeRadius, "S");
+  
+  // Draw vertical meridian lines
+  doc.line(logoX, logoY - globeRadius, logoX, logoY + globeRadius);
+  
+  // Draw horizontal latitude lines
+  doc.ellipse(logoX, logoY, globeRadius, globeRadius * 0.6, "S");
+  doc.ellipse(logoX, logoY, globeRadius * 0.5, globeRadius * 0.3, "S");
+  
+  // Fill with light mission gold background
   doc.setFillColor(MISSION_GOLD);
-  doc.circle(logoX, logoY, 4.5, "F");
+  doc.circle(logoX, logoY, globeRadius * 0.7, "F");
+  doc.setDrawColor(MISSION_GOLD);
+  doc.circle(logoX, logoY, globeRadius, "S");
 
   // Company name and tagline next to logo (much larger, matching website)
   doc.setTextColor(WHITE);
