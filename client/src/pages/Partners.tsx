@@ -209,7 +209,8 @@ export default function Partners() {
       </Section>
 
       {/* Partner Registration Form */}
-      <Section dark id="registration-form">
+      <Section dark id="registration-form" className="scroll-mt-20">
+        <div id="subcontractor" className="absolute -top-20" />
         <SectionHeader
           subtitle="Join Our Network"
           title="Partner Registration"
