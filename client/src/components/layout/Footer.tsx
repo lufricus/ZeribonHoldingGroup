@@ -82,11 +82,9 @@ export function Footer() {
             <ul className="space-y-3">
               {footerLinks.company.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href}>
-                    <span className="text-steel-gray hover:text-mission-gold transition-colors text-sm cursor-pointer">
-                      {link.label}
-                    </span>
-                  </Link>
+                  <a href={link.href} className="text-steel-gray hover:text-mission-gold transition-colors text-sm cursor-pointer" data-testid={`footer-link-${link.label.toLowerCase().replace(/\s+/g, "-")}`}>
+                    {link.label}
+                  </a>
                 </li>
               ))}
             </ul>
@@ -98,11 +96,9 @@ export function Footer() {
             <ul className="space-y-3">
               {footerLinks.capabilities.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href}>
-                    <span className="text-steel-gray hover:text-mission-gold transition-colors text-sm cursor-pointer">
-                      {link.label}
-                    </span>
-                  </Link>
+                  <a href={link.href} className="text-steel-gray hover:text-mission-gold transition-colors text-sm cursor-pointer" data-testid={`footer-link-${link.label.toLowerCase().replace(/\s+/g, "-")}`}>
+                    {link.label}
+                  </a>
                 </li>
               ))}
             </ul>
@@ -114,11 +110,9 @@ export function Footer() {
             <ul className="space-y-3">
               {footerLinks.government.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href}>
-                    <span className="text-steel-gray hover:text-mission-gold transition-colors text-sm cursor-pointer">
-                      {link.label}
-                    </span>
-                  </Link>
+                  <a href={link.href} className="text-steel-gray hover:text-mission-gold transition-colors text-sm cursor-pointer" data-testid={`footer-link-${link.label.toLowerCase().replace(/\s+/g, "-")}`}>
+                    {link.label}
+                  </a>
                 </li>
               ))}
             </ul>
@@ -130,11 +124,9 @@ export function Footer() {
             <ul className="space-y-3">
               {footerLinks.partners.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href}>
-                    <span className="text-steel-gray hover:text-mission-gold transition-colors text-sm cursor-pointer">
-                      {link.label}
-                    </span>
-                  </Link>
+                  <a href={link.href} className="text-steel-gray hover:text-mission-gold transition-colors text-sm cursor-pointer" data-testid={`footer-link-${link.label.toLowerCase().replace(/\s+/g, "-")}`}>
+                    {link.label}
+                  </a>
                 </li>
               ))}
             </ul>
