@@ -242,47 +242,19 @@ export default function Home() {
         </div>
       </Section>
 
-      {/* Founder Highlight */}
+      {/* Founder's Statement */}
       <Section className="bg-muted/30">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-3xl mx-auto text-center">
           <p className="text-sm font-medium tracking-widest uppercase mb-3 text-mission-gold">
             Leadership
           </p>
           <h2 className="font-heading font-bold text-3xl md:text-4xl tracking-tight mb-8">
-            Founder & CEO
+            Founder's Statement
           </h2>
           
           <div className="bg-card border border-card-border rounded-lg p-8 md:p-12">
-            <div className="w-24 h-24 mx-auto mb-6 bg-gradient-to-br from-mission-gold to-mission-gold/70 rounded-full flex items-center justify-center">
-              <span className="text-deep-navy font-heading font-bold text-3xl">AD</span>
-            </div>
-            
-            <h3 className="font-heading font-bold text-2xl mb-2">Arghoon Dar</h3>
-            <p className="text-muted-foreground mb-6">Founder & Chief Executive Officer</p>
-            
-            <div className="space-y-3 text-sm text-muted-foreground mb-8">
-              <p className="flex items-center justify-center gap-2">
-                <Shield className="w-4 h-4 text-mission-gold" />
-                U.S. Army Special Forces Veteran
-              </p>
-              <p className="flex items-center justify-center gap-2">
-                <Award className="w-4 h-4 text-mission-gold" />
-                Worked alongside Navy SEALs, Delta Force, Rangers, CIA, and FBI
-              </p>
-              <p className="flex items-center justify-center gap-2">
-                <Building2 className="w-4 h-4 text-mission-gold" />
-                Former Tier-1 Investment Bank Officer (Wall Street)
-              </p>
-              <p className="flex items-center justify-center gap-2">
-                <BadgeCheck className="w-4 h-4 text-mission-gold" />
-                Cornell University Executive MBA (Ivy League)
-              </p>
-            </div>
-            
-            <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed italic">
-              "A mission built to serve America with integrity, precision, and operational excellence. 
-              We bring military discipline, Wall Street financial expertise, and global operational 
-              leadership to every engagement."
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              "Zeribon Holding Group was created to serve America with integrity, precision, and operational excellence. Built on the principles of military discipline, financial expertise, and global operational leadership, the mission is simple — deliver solutions that meet the highest federal standards and support agencies that protect and strengthen this nation."
             </p>
           </div>
         </div>
