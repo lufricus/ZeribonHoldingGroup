@@ -248,7 +248,7 @@ export const embassiesAndConsulates = [
   { city: "Buenos Aires", country: "Argentina", type: "Embassy" },
   { city: "Bogota", country: "Colombia", type: "Embassy" },
   { city: "Cairo", country: "Egypt", type: "Embassy" },
-  { city: "Tel Aviv", country: "Israel", type: "Embassy" },
+  { city: "Rabat", country: "Morocco", type: "Embassy" },
   { city: "Jerusalem", country: "Israel", type: "Embassy" },
   { city: "Riyadh", country: "Saudi Arabia", type: "Embassy" },
   { city: "Abu Dhabi", country: "United Arab Emirates", type: "Embassy" },
