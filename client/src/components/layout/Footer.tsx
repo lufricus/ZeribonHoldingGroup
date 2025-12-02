@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { Mail, Phone, MapPin, Linkedin, ExternalLink, Globe } from "lucide-react";
+import { Mail, MapPin, Linkedin, ExternalLink, Globe } from "lucide-react";
 
 const footerLinks = {
   company: [
@@ -62,14 +62,6 @@ export function Footer() {
               >
                 <Mail className="w-4 h-4" />
                 contact@zeribongroup.com
-              </a>
-              <a 
-                href="tel:+1-000-000-0000" 
-                className="flex items-center gap-3 text-steel-gray hover:text-mission-gold transition-colors text-sm"
-                data-testid="link-footer-phone"
-              >
-                <Phone className="w-4 h-4" />
-                (000) 000-0000
               </a>
               <div className="flex items-start gap-3 text-steel-gray text-sm">
                 <MapPin className="w-4 h-4 mt-0.5 shrink-0" />
