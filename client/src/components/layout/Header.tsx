@@ -78,14 +78,8 @@ export function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <a href="/" className="flex items-center gap-3 cursor-pointer" data-testid="link-home-logo">
-            <div className="w-10 h-10 bg-mission-gold rounded-md flex items-center justify-center">
-              <span className="text-deep-navy font-heading font-bold text-lg">Z</span>
-            </div>
-            <div className="hidden sm:block">
-              <div className="text-white font-heading font-bold text-lg tracking-wide">ZERIBON</div>
-              <div className="text-steel-gray text-xs tracking-widest">HOLDING GROUP</div>
-            </div>
+          <a href="/" className="flex items-center cursor-pointer" data-testid="link-home-logo">
+            <div className="text-white font-heading font-bold text-2xl tracking-wide">ZERIBON</div>
           </a>
 
           {/* Desktop Navigation */}
