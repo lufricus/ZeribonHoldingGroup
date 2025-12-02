@@ -254,7 +254,7 @@ export default function Home() {
           
           <div className="bg-card border border-card-border rounded-lg p-8 md:p-12">
             <p className="text-lg text-muted-foreground leading-relaxed">
-              "Zeribon Holding Group was created to serve America with integrity, precision, and operational excellence. Built on the principles of military discipline, financial expertise, and global operational leadership, the mission is simple — deliver solutions that meet the highest federal standards and support agencies that protect and strengthen this nation."
+              "Zeribon Holding Group is built on a clear principle. Deliver mission-critical solutions with integrity, discipline, and complete reliability. Our leadership philosophy reflects real experience across military service, financial oversight, and global operations. Every engagement is carried out with readiness and precision to meet the highest federal standards."
             </p>
           </div>
         </div>
