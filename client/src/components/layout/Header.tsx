@@ -91,7 +91,7 @@ export function Header() {
             {navItems.map((item) => (
               <div
                 key={item.label}
-                className="relative"
+                className="relative group"
                 onMouseEnter={() => item.children && setActiveDropdown(item.label)}
                 onMouseLeave={() => setActiveDropdown(null)}
               >
@@ -116,7 +116,7 @@ export function Header() {
 
                 {/* Dropdown */}
                 {item.children && activeDropdown === item.label && (
-                  <div className="absolute top-full left-0 mt-1 w-64 bg-deep-navy border border-federal-blue/50 rounded-md shadow-xl py-2 animate-fade-in">
+                  <div className="absolute top-full left-0 mt-0 w-64 bg-deep-navy border border-federal-blue/50 rounded-md shadow-xl py-2 animate-fade-in z-50" onMouseEnter={() => setActiveDropdown(item.label)} onMouseLeave={() => setActiveDropdown(null)}>
                     {item.children.map((child) => (
                       <a 
                         key={child.href} 
