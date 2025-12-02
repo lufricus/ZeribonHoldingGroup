@@ -13,12 +13,8 @@ const footerLinks = {
     { label: "Security Services", href: "/capabilities#security" },
     { label: "Staffing Solutions", href: "/capabilities#staffing" },
     { label: "Cleaning Services", href: "/capabilities#cleaning" },
-    { label: "Global Cleaning Operations", href: "/capabilities#global-cleaning" },
-    { label: "IT & Supply Solutions", href: "/capabilities#it-supply" },
-    { label: "Real Estate & Property Management", href: "/capabilities#real-estate" },
     { label: "Logistics & Procurement", href: "/capabilities#logistics" },
-    { label: "Fleet & Vehicle Logistics", href: "/capabilities#fleet" },
-    { label: "Global Operations & Deployment", href: "/capabilities#global-ops" },
+    { label: "Global Operations", href: "/capabilities#global-ops" },
   ],
   government: [
     { label: "Contracting Info", href: "/government#contracting" },
