@@ -25,8 +25,23 @@ function AnalyticsTracker() {
   
   useEffect(() => {
     analytics.trackPageView(location);
-    // Scroll to top on route change
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    
+    // Extract hash from location
+    const hashMatch = location.match(/#(.+)$/);
+    const hash = hashMatch ? hashMatch[1] : null;
+    
+    if (hash) {
+      // If there's a hash, wait a bit for page to render, then scroll to element
+      setTimeout(() => {
+        const element = document.getElementById(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }, 100);
+    } else {
+      // No hash, scroll to top
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
   }, [location]);
   
   return null;
