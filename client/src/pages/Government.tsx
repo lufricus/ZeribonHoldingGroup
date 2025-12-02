@@ -1,7 +1,7 @@
 import { Link } from "wouter";
 import { 
   FileText, Shield, Hash, Folder, Award, Building2,
-  Download, ArrowRight, CheckCircle, ExternalLink
+  Download, ArrowRight, CheckCircle, ExternalLink, Globe
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -253,10 +253,13 @@ export default function Government() {
             <Card className="bg-card">
               <CardContent className="p-8">
                 <div className="text-center mb-6">
-                  <div className="w-16 h-16 mx-auto bg-mission-gold rounded-md flex items-center justify-center mb-4">
-                    <span className="text-deep-navy font-heading font-bold text-2xl">Z</span>
+                  <div className="flex items-center justify-center gap-2 mb-4">
+                    <Globe className="w-6 h-6 text-mission-gold" />
+                    <div className="flex flex-col leading-tight">
+                      <div className="text-white font-heading font-bold text-sm tracking-wider">ZERIBON</div>
+                      <div className="text-mission-gold font-heading font-semibold text-xs tracking-widest">HOLDING GROUP</div>
+                    </div>
                   </div>
-                  <h3 className="font-heading font-bold text-xl">ZERIBON HOLDING GROUP</h3>
                   <p className="text-muted-foreground text-sm">Capability Statement</p>
                 </div>
                 
