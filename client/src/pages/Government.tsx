@@ -253,7 +253,7 @@ export default function Government() {
             <Card className="bg-card">
               <CardContent className="p-8">
                 <div className="text-center mb-6">
-                  <div className="flex items-center justify-center gap-2 mb-4">
+                  <div className="flex items-center justify-center gap-2 mb-6">
                     <Globe className="w-6 h-6 text-mission-gold" />
                     <div className="flex flex-col leading-tight">
                       <div className="text-black font-heading font-bold text-sm tracking-wider">ZERIBON</div>
