@@ -79,9 +79,9 @@ export function Header() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <a href="/" className="flex items-center cursor-pointer" data-testid="link-home-logo">
-            <div className="flex flex-col">
-              <div className="text-white font-heading font-bold text-2xl tracking-wide">ZERIBON</div>
-              <div className="h-1 bg-mission-gold rounded-full w-full" />
+            <div className="flex flex-col leading-tight">
+              <div className="text-white font-heading font-bold text-xl tracking-wider">ZERIBON</div>
+              <div className="text-mission-gold font-heading font-semibold text-xs tracking-widest">HOLDING GROUP</div>
             </div>
           </a>
 
