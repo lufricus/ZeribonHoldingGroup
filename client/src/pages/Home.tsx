@@ -76,6 +76,7 @@ const capabilities = [
 
 const credentials = [
   { icon: Award, label: "Veteran-Led" },
+  { icon: CheckCircle, label: "SBA Approved" },
   { icon: CheckCircle, label: "SAM Registered" },
   { icon: BadgeCheck, label: "UEI Verified" },
   { icon: Lock, label: "CAGE Certified" },

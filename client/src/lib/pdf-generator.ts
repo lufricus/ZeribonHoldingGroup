@@ -150,6 +150,16 @@ export function generateCapabilityStatementPDF(data: CapabilityStatementData = d
   const leftCol = margin;
   const rightCol = margin + colWidth + 5;
 
+  // SBA Approved Badge
+  doc.setFillColor(MISSION_GOLD);
+  doc.rect(margin, y, 40, 6, "F");
+  doc.setTextColor(FEDERAL_BLUE);
+  doc.setFontSize(7);
+  doc.setFont("helvetica", "bold");
+  doc.text("SBA APPROVED BUSINESS", margin + 2, y + 4.5);
+  
+  y += 10;
+
   // Left Column - Core Competencies
   doc.setFillColor(FEDERAL_BLUE);
   doc.rect(leftCol - 2, y - 2, colWidth + 4, 8, "F");

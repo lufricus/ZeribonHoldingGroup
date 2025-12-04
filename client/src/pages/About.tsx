@@ -31,6 +31,7 @@ const coreValues = [
 
 const certifications = [
   { label: "Veteran-Owned Business", status: "Verified" },
+  { label: "SBA Approved", status: "Approved" },
   { label: "SAM Registration", status: "Active" },
   { label: "UEI Number", status: "Verified" },
   { label: "CAGE Code", status: "Certified" },
