@@ -97,26 +97,27 @@ export function generateCapabilityStatementPDF(data: CapabilityStatementData = d
   doc.setFillColor(FEDERAL_BLUE);
   doc.rect(0, 0, pageWidth, 35, "F");
 
-  // Logo - Clean minimal globe matching lucide-react website icon
+  // Logo - Zeribon teardrop/leaf shape
   const logoX = margin + 3;
   const logoY = 11;
-  const globeRadius = 4.5;
+  const logoSize = 3.5;
   
-  // Draw main circle outline
+  // Draw teardrop/leaf shape (Zeribon logo style)
   doc.setDrawColor(MISSION_GOLD);
-  doc.setLineWidth(0.5);
-  doc.circle(logoX, logoY, globeRadius, "S");
+  doc.setLineWidth(0.8);
+  doc.setFillColor(MISSION_GOLD);
   
-  // Draw two curved lines for globe effect (simple and minimal like lucide icon)
-  doc.setDrawColor(MISSION_GOLD);
-  doc.setLineWidth(0.5);
+  // Create a stylized teardrop shape with multiple curved lines
+  // Top pointed part
+  doc.line(logoX, logoY - logoSize, logoX + 1, logoY - logoSize + 1.5);
+  doc.line(logoX, logoY - logoSize, logoX - 1, logoY - logoSize + 1.5);
   
-  // Vertical center line
-  doc.line(logoX, logoY - globeRadius, logoX, logoY + globeRadius);
+  // Main bulbous part
+  doc.ellipse(logoX, logoY + 0.5, logoSize * 0.6, logoSize * 0.8, "S");
   
-  // Curved horizontal line (simplified)
-  doc.ellipse(logoX, logoY - 1.5, globeRadius * 0.7, globeRadius * 0.4, "S");
-  doc.ellipse(logoX, logoY + 1.5, globeRadius * 0.7, globeRadius * 0.4, "S");
+  // Bottom point
+  doc.line(logoX - 0.6, logoY + logoSize, logoX, logoY + logoSize + 0.8);
+  doc.line(logoX + 0.6, logoY + logoSize, logoX, logoY + logoSize + 0.8);
 
   // Company name and tagline next to logo (much larger, matching website)
   doc.setTextColor(WHITE);

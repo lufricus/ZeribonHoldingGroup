@@ -30,6 +30,7 @@ import { PageMeta } from "@/components/seo/PageMeta";
 import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
 import { insertContactSchema, type InsertContact } from "@shared/schema";
+import zerizonLogoUrl from "@assets/zeribon_transparent_(1)_1764971400396.png";
 
 const subjectOptions = [
   { value: "general", label: "General Inquiry" },
@@ -134,6 +135,13 @@ export default function Contact() {
           </div>
         </div>
       </section>
+
+      {/* Logo Section */}
+      <Section className="bg-deep-navy border-b border-federal-blue/30 py-8">
+        <div className="flex justify-center mb-8">
+          <img src={zerizonLogoUrl} alt="Zeribon Holding Group" className="h-24 w-auto" />
+        </div>
+      </Section>
 
       {/* Quick Contact Options */}
       <Section className="bg-muted/30">
