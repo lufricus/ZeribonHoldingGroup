@@ -77,10 +77,10 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full bg-deep-navy border-b border-federal-blue/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-24">
           {/* Logo */}
           <a href="/" className="flex items-center gap-3 cursor-pointer" data-testid="link-home-logo">
-            <img src={zerizonLogoUrl} alt="Zeribon Holding Group" className="h-12 w-auto" />
+            <img src={zerizonLogoUrl} alt="Zeribon Holding Group" className="h-20 w-auto" />
           </a>
 
           {/* Desktop Navigation */}
