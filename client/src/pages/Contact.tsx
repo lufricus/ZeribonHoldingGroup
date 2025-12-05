@@ -136,13 +136,6 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* Logo Section */}
-      <Section className="bg-deep-navy border-b border-federal-blue/30 py-8">
-        <div className="flex justify-center mb-8">
-          <img src={zerizonLogoUrl} alt="Zeribon Holding Group" className="h-24 w-auto" />
-        </div>
-      </Section>
-
       {/* Quick Contact Options */}
       <Section className="bg-muted/30">
         <div className="grid md:grid-cols-3 gap-6">
@@ -351,6 +344,10 @@ export default function Contact() {
           
           {/* Contact Info */}
           <div className="lg:col-span-2">
+            <div className="flex justify-center mb-8">
+              <img src={zerizonLogoUrl} alt="Zeribon Holding Group" className="h-24 w-auto" />
+            </div>
+            
             <SectionHeader
               subtitle="Direct Contact"
               title="Get In Touch"
