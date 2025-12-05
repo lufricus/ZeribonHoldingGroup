@@ -1,5 +1,6 @@
 import { Link } from "wouter";
-import { Mail, MapPin, Linkedin, ExternalLink, Globe } from "lucide-react";
+import { Mail, MapPin, Linkedin, ExternalLink } from "lucide-react";
+import zerizonLogoUrl from "@assets/zeribon_transparent_(1)_1764971400396.png";
 
 const footerLinks = {
   company: [
@@ -42,13 +43,7 @@ export function Footer() {
           {/* Brand Column */}
           <div className="lg:col-span-2">
             <Link href="/">
-              <div className="flex items-center gap-2 cursor-pointer mb-6">
-                <Globe className="w-6 h-6 text-mission-gold" />
-                <div className="flex flex-col leading-tight">
-                  <div className="text-white font-heading font-bold text-sm tracking-wider">ZERIBON</div>
-                  <div className="text-mission-gold font-heading font-semibold text-xs tracking-widest">HOLDING GROUP</div>
-                </div>
-              </div>
+              <img src={zerizonLogoUrl} alt="Zeribon Holding Group" className="h-16 w-auto mb-6 cursor-pointer" />
             </Link>
             <p className="text-steel-gray text-sm leading-relaxed mb-6 max-w-sm">
               Veteran-led government contractor delivering mission-critical services across advisory, 
