@@ -1,13 +1,14 @@
 import { Link } from "wouter";
 import { 
   FileText, Shield, Hash, Folder, Award, Building2,
-  Download, ArrowRight, CheckCircle, ExternalLink, Globe
+  Download, ArrowRight, CheckCircle, ExternalLink
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Section, SectionHeader } from "@/components/ui/section";
 import { PageMeta } from "@/components/seo/PageMeta";
 import { generateCapabilityStatementPDF } from "@/lib/pdf-generator";
+import zerizonLogoUrl from "@assets/zeribon_transparent_(1)_1764971400396.png";
 
 const identifiers = [
   { label: "UEI Number", value: "Registered", description: "Unique Entity Identifier for federal contracting" },
@@ -253,14 +254,10 @@ export default function Government() {
             <Card className="bg-card">
               <CardContent className="p-8">
                 <div className="mb-6">
-                  <div className="flex items-center gap-2 mb-6">
-                    <Globe className="w-6 h-6 text-mission-gold" />
-                    <div className="flex flex-col leading-tight">
-                      <div className="text-black font-heading font-bold text-sm tracking-wider">ZERIBON</div>
-                      <div className="text-mission-gold font-heading font-semibold text-xs tracking-widest">HOLDING GROUP</div>
-                    </div>
+                  <div className="flex justify-center mb-6">
+                    <img src={zerizonLogoUrl} alt="Zeribon Holding Group" className="h-20 w-auto" />
                   </div>
-                  <p className="text-muted-foreground text-sm">Capability Statement</p>
+                  <p className="text-muted-foreground text-sm text-center">Capability Statement</p>
                 </div>
                 
                 <div className="space-y-4 text-sm">
