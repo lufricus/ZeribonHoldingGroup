@@ -43,7 +43,7 @@ export function Footer() {
           {/* Brand Column */}
           <div className="lg:col-span-2">
             <Link href="/">
-              <img src={zerizonLogoUrl} alt="Zeribon Holding Group" className="h-16 w-auto mb-6 cursor-pointer" />
+              <img src={zerizonLogoUrl} alt="Zeribon Holding Group" className="h-20 w-auto mb-6 cursor-pointer" />
             </Link>
             <p className="text-steel-gray text-sm leading-relaxed mb-6 max-w-sm">
               Veteran-led government contractor delivering mission-critical services across advisory, 
