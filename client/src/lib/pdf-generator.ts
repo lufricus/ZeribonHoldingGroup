@@ -79,7 +79,7 @@ const defaultData: CapabilityStatementData = {
   website: "www.zeribonholding.com",
 };
 
-export async function generateCapabilityStatementPDF(data: CapabilityStatementData = defaultData): Promise<void> {
+export function generateCapabilityStatementPDF(data: CapabilityStatementData = defaultData): void {
   const doc = new jsPDF({
     orientation: "portrait",
     unit: "mm",
@@ -97,39 +97,28 @@ export async function generateCapabilityStatementPDF(data: CapabilityStatementDa
   doc.setFillColor(FEDERAL_BLUE);
   doc.rect(0, 0, pageWidth, 35, "F");
 
-  // Logo - Add actual Zeribon logo image
-  try {
-    const logoUrl = "/zeribon_transparent_(1)_1764971400396.png";
-    const response = await fetch(logoUrl);
-    const blob = await response.blob();
-    
-    await new Promise<void>((resolve) => {
-      const img = new Image();
-      img.onload = () => {
-        const canvas = document.createElement("canvas");
-        canvas.width = img.width;
-        canvas.height = img.height;
-        const ctx = canvas.getContext("2d");
-        if (ctx) {
-          ctx.fillStyle = "#FFFFFF";
-          ctx.fillRect(0, 0, canvas.width, canvas.height);
-          ctx.drawImage(img, 0, 0);
-        }
-        const imgData = canvas.toDataURL("image/jpeg");
-        const logoWidth = 15;
-        const logoHeight = 12;
-        const logoX = pageWidth / 2 - logoWidth / 2;
-        const logoY = 4;
-        doc.addImage(imgData, "JPEG", logoX, logoY, logoWidth, logoHeight);
-        resolve();
-      };
-      img.src = URL.createObjectURL(blob);
-    });
-  } catch (error) {
-    console.error("Failed to load logo image:", error);
-  }
+  // Logo - Zeribon teardrop/leaf shape design
+  const logoX = pageWidth / 2 - 2;
+  const logoY = 11;
+  const logoSize = 4;
+  
+  // Draw stylized teardrop logo
+  doc.setDrawColor(MISSION_GOLD);
+  doc.setLineWidth(1);
+  doc.setFillColor(MISSION_GOLD);
+  
+  // Top pointed part
+  doc.line(logoX, logoY - logoSize, logoX + 1.2, logoY - logoSize + 2);
+  doc.line(logoX, logoY - logoSize, logoX - 1.2, logoY - logoSize + 2);
+  
+  // Main bulbous part
+  doc.ellipse(logoX, logoY + 0.7, logoSize * 0.7, logoSize * 0.9, "S");
+  
+  // Bottom point
+  doc.line(logoX - 0.7, logoY + logoSize + 0.5, logoX, logoY + logoSize + 1.2);
+  doc.line(logoX + 0.7, logoY + logoSize + 0.5, logoX, logoY + logoSize + 1.2);
 
-  // Tagline below logo
+  // Tagline below logo (company name removed, only tagline)
   doc.setFontSize(10);
   doc.setFont("helvetica", "normal");
   doc.setTextColor(MISSION_GOLD);
