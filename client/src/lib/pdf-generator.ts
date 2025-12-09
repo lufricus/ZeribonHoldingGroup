@@ -79,7 +79,7 @@ const defaultData: CapabilityStatementData = {
   website: "www.zeribonholding.com",
 };
 
-export function generateCapabilityStatementPDF(data: CapabilityStatementData = defaultData): void {
+export async function generateCapabilityStatementPDF(data: CapabilityStatementData = defaultData): Promise<void> {
   const doc = new jsPDF({
     orientation: "portrait",
     unit: "mm",
@@ -97,26 +97,46 @@ export function generateCapabilityStatementPDF(data: CapabilityStatementData = d
   doc.setFillColor(FEDERAL_BLUE);
   doc.rect(0, 0, pageWidth, 35, "F");
 
-  // Logo - Zeribon teardrop/leaf shape design
-  const logoX = pageWidth / 2 - 2;
-  const logoY = 11;
-  const logoSize = 4;
-  
-  // Draw stylized teardrop logo
-  doc.setDrawColor(MISSION_GOLD);
-  doc.setLineWidth(1);
-  doc.setFillColor(MISSION_GOLD);
-  
-  // Top pointed part
-  doc.line(logoX, logoY - logoSize, logoX + 1.2, logoY - logoSize + 2);
-  doc.line(logoX, logoY - logoSize, logoX - 1.2, logoY - logoSize + 2);
-  
-  // Main bulbous part
-  doc.ellipse(logoX, logoY + 0.7, logoSize * 0.7, logoSize * 0.9, "S");
-  
-  // Bottom point
-  doc.line(logoX - 0.7, logoY + logoSize + 0.5, logoX, logoY + logoSize + 1.2);
-  doc.line(logoX + 0.7, logoY + logoSize + 0.5, logoX, logoY + logoSize + 1.2);
+  // Logo - Add Zeribon logo image
+  try {
+    const logoUrl = "/zeribon_transparent_(1)_1765320298690.png";
+    const response = await fetch(logoUrl);
+    const blob = await response.blob();
+    
+    const canvas = document.createElement("canvas");
+    canvas.width = 200;
+    canvas.height = 200;
+    const ctx = canvas.getContext("2d");
+    
+    if (ctx) {
+      ctx.fillStyle = FEDERAL_BLUE;
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      
+      const img = new Image();
+      img.onload = () => {
+        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+      };
+      img.src = URL.createObjectURL(blob);
+      
+      await new Promise<void>((resolve) => {
+        const checkInterval = setInterval(() => {
+          const imageData = ctx.getImageData(0, 0, 1, 1).data;
+          if (imageData[3] > 0) {
+            clearInterval(checkInterval);
+            const imgData = canvas.toDataURL("image/png");
+            const logoWidth = 12;
+            const logoHeight = 14;
+            const logoX = pageWidth / 2 - logoWidth / 2;
+            const logoY = 4;
+            doc.addImage(imgData, "PNG", logoX, logoY, logoWidth, logoHeight);
+            resolve();
+          }
+        }, 50);
+      });
+    }
+  } catch (error) {
+    console.error("Failed to load logo:", error);
+  }
 
   // Tagline below logo (company name removed, only tagline)
   doc.setFontSize(10);
