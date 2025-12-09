@@ -237,7 +237,9 @@ export default function Government() {
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
                 data-testid="button-download-capability"
-                onClick={() => generateCapabilityStatementPDF()}
+                onClick={async () => {
+                  await generateCapabilityStatementPDF();
+                }}
               >
                 <Download className="w-4 h-4 mr-2" />
                 Download PDF

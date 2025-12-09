@@ -79,7 +79,7 @@ const defaultData: CapabilityStatementData = {
   website: "www.zeribonholding.com",
 };
 
-export function generateCapabilityStatementPDF(data: CapabilityStatementData = defaultData): void {
+export async function generateCapabilityStatementPDF(data: CapabilityStatementData = defaultData): Promise<void> {
   const doc = new jsPDF({
     orientation: "portrait",
     unit: "mm",
@@ -97,44 +97,43 @@ export function generateCapabilityStatementPDF(data: CapabilityStatementData = d
   doc.setFillColor(FEDERAL_BLUE);
   doc.rect(0, 0, pageWidth, 35, "F");
 
-  // Logo - Zeribon teardrop/leaf shape
-  const logoX = margin + 3;
-  const logoY = 11;
-  const logoSize = 3.5;
-  
-  // Draw teardrop/leaf shape (Zeribon logo style)
-  doc.setDrawColor(MISSION_GOLD);
-  doc.setLineWidth(0.8);
-  doc.setFillColor(MISSION_GOLD);
-  
-  // Create a stylized teardrop shape with multiple curved lines
-  // Top pointed part
-  doc.line(logoX, logoY - logoSize, logoX + 1, logoY - logoSize + 1.5);
-  doc.line(logoX, logoY - logoSize, logoX - 1, logoY - logoSize + 1.5);
-  
-  // Main bulbous part
-  doc.ellipse(logoX, logoY + 0.5, logoSize * 0.6, logoSize * 0.8, "S");
-  
-  // Bottom point
-  doc.line(logoX - 0.6, logoY + logoSize, logoX, logoY + logoSize + 0.8);
-  doc.line(logoX + 0.6, logoY + logoSize, logoX, logoY + logoSize + 0.8);
+  // Logo - Add actual Zeribon logo image
+  try {
+    const logoUrl = "/zeribon_transparent_(1)_1764971400396.png";
+    const response = await fetch(logoUrl);
+    const blob = await response.blob();
+    
+    await new Promise<void>((resolve) => {
+      const img = new Image();
+      img.onload = () => {
+        const canvas = document.createElement("canvas");
+        canvas.width = img.width;
+        canvas.height = img.height;
+        const ctx = canvas.getContext("2d");
+        if (ctx) {
+          ctx.fillStyle = "#FFFFFF";
+          ctx.fillRect(0, 0, canvas.width, canvas.height);
+          ctx.drawImage(img, 0, 0);
+        }
+        const imgData = canvas.toDataURL("image/jpeg");
+        const logoWidth = 15;
+        const logoHeight = 12;
+        const logoX = pageWidth / 2 - logoWidth / 2;
+        const logoY = 4;
+        doc.addImage(imgData, "JPEG", logoX, logoY, logoWidth, logoHeight);
+        resolve();
+      };
+      img.src = URL.createObjectURL(blob);
+    });
+  } catch (error) {
+    console.error("Failed to load logo image:", error);
+  }
 
-  // Company name and tagline next to logo (much larger, matching website)
-  doc.setTextColor(WHITE);
-  doc.setFontSize(22);
-  doc.setFont("helvetica", "bold");
-  doc.text("ZERIBON", logoX + 11, logoY - 0.5);
-
-  doc.setFontSize(9.5);
-  doc.setFont("helvetica", "bold");
-  doc.setTextColor(MISSION_GOLD);
-  doc.text("HOLDING GROUP", logoX + 11, logoY + 3);
-
-  // Tagline below
+  // Tagline below logo
   doc.setFontSize(10);
   doc.setFont("helvetica", "normal");
   doc.setTextColor(MISSION_GOLD);
-  doc.text(data.tagline, pageWidth / 2, 29, { align: "center" });
+  doc.text(data.tagline, pageWidth / 2, 28, { align: "center" });
 
   // Title bar
   doc.setFillColor(MISSION_GOLD);
