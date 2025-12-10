@@ -77,7 +77,7 @@ const defaultData: CapabilityStatementData = {
   ],
   contactEmail: "contact@zeribongroup.com",
   contactPhone: "(202) 555-0100",
-  website: "www.zeribonholding.com",
+  website: "zeribongroup.com",
 };
 
 export async function generateCapabilityStatementPDF(data: CapabilityStatementData = defaultData): Promise<void> {
