@@ -324,7 +324,7 @@ export async function generateCapabilityStatementPDF(data: CapabilityStatementDa
   doc.setFontSize(8);
   doc.setTextColor(MISSION_GOLD);
   
-  const contactLine = `${data.contactEmail}  |  ${data.contactPhone}  |  ${data.website}`;
+  const contactLine = `${data.contactEmail}  |  ${data.website}`;
   doc.text(contactLine, pageWidth / 2, footerY + 15, { align: "center" });
 
   // Veteran-Owned badge
