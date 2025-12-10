@@ -33,32 +33,40 @@ const allowlist = [
 ];
 
 async function buildAll() {
+  // Check if STATIC_ONLY environment variable is set for shared hosting deployment
+  const staticOnly = process.env.STATIC_ONLY === "true";
+
   await rm("dist", { recursive: true, force: true });
 
   console.log("building client...");
   await viteBuild();
 
-  console.log("building server...");
-  const pkg = JSON.parse(await readFile("package.json", "utf-8"));
-  const allDeps = [
-    ...Object.keys(pkg.dependencies || {}),
-    ...Object.keys(pkg.devDependencies || {}),
-  ];
-  const externals = allDeps.filter((dep) => !allowlist.includes(dep));
+  if (!staticOnly) {
+    console.log("building server...");
+    const pkg = JSON.parse(await readFile("package.json", "utf-8"));
+    const allDeps = [
+      ...Object.keys(pkg.dependencies || {}),
+      ...Object.keys(pkg.devDependencies || {}),
+    ];
+    const externals = allDeps.filter((dep) => !allowlist.includes(dep));
 
-  await esbuild({
-    entryPoints: ["server/index.ts"],
-    platform: "node",
-    bundle: true,
-    format: "cjs",
-    outfile: "dist/index.cjs",
-    define: {
-      "process.env.NODE_ENV": '"production"',
-    },
-    minify: true,
-    external: externals,
-    logLevel: "info",
-  });
+    await esbuild({
+      entryPoints: ["server/index.ts"],
+      platform: "node",
+      bundle: true,
+      format: "cjs",
+      outfile: "dist/index.cjs",
+      define: {
+        "process.env.NODE_ENV": '"production"',
+      },
+      minify: true,
+      external: externals,
+      logLevel: "info",
+    });
+  } else {
+    console.log("✓ Static-only build complete. Skip server build.");
+    console.log("✓ Frontend assets ready in: dist/public/");
+  }
 }
 
 buildAll().catch((err) => {
