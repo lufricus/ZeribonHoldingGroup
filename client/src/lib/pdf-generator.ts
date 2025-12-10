@@ -103,36 +103,37 @@ export async function generateCapabilityStatementPDF(data: CapabilityStatementDa
     const response = await fetch(logoUrl);
     const blob = await response.blob();
     
+    // Create canvas with proper dimensions for logo
     const canvas = document.createElement("canvas");
-    canvas.width = 200;
-    canvas.height = 200;
+    canvas.width = 400;
+    canvas.height = 480;
     const ctx = canvas.getContext("2d");
     
     if (ctx) {
+      // Fill with header background color
       ctx.fillStyle = FEDERAL_BLUE;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
       
+      // Create image and wait for it to load
       const img = new Image();
-      img.onload = () => {
-        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
-      };
-      img.src = URL.createObjectURL(blob);
-      
-      await new Promise<void>((resolve) => {
-        const checkInterval = setInterval(() => {
-          const imageData = ctx.getImageData(0, 0, 1, 1).data;
-          if (imageData[3] > 0) {
-            clearInterval(checkInterval);
-            const imgData = canvas.toDataURL("image/png");
-            const logoWidth = 12;
-            const logoHeight = 14;
-            const logoX = pageWidth / 2 - logoWidth / 2;
-            const logoY = 4;
-            doc.addImage(imgData, "PNG", logoX, logoY, logoWidth, logoHeight);
-            resolve();
-          }
-        }, 50);
+      await new Promise<void>((resolve, reject) => {
+        img.onload = () => {
+          // Draw the image on the canvas
+          ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+          resolve();
+        };
+        img.onerror = () => reject(new Error("Failed to load image"));
+        img.src = URL.createObjectURL(blob);
       });
+      
+      // Convert canvas to JPEG (which jsPDF handles better than PNG)
+      const imgData = canvas.toDataURL("image/jpeg", 0.95);
+      const logoWidth = 12;
+      const logoHeight = 14.4; // maintain aspect ratio
+      const logoX = pageWidth / 2 - logoWidth / 2;
+      const logoY = 4;
+      
+      doc.addImage(imgData, "JPEG", logoX, logoY, logoWidth, logoHeight);
     }
   } catch (error) {
     console.error("Failed to load logo:", error);
