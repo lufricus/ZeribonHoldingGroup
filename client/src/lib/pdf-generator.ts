@@ -1,4 +1,5 @@
 import jsPDF from "jspdf";
+import logoImage from "@assets/zeribon_transparent_(1)_1765320298690.png";
 
 const FEDERAL_BLUE = "#0A1A3E";
 const MISSION_GOLD = "#C1A45A";
@@ -99,10 +100,6 @@ export async function generateCapabilityStatementPDF(data: CapabilityStatementDa
 
   // Logo - Add Zeribon logo image
   try {
-    const logoUrl = "/zeribon_transparent_(1)_1765320298690.png";
-    const response = await fetch(logoUrl);
-    const blob = await response.blob();
-    
     // Create canvas with proper dimensions for logo
     const canvas = document.createElement("canvas");
     canvas.width = 400;
@@ -114,7 +111,7 @@ export async function generateCapabilityStatementPDF(data: CapabilityStatementDa
       ctx.fillStyle = FEDERAL_BLUE;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
       
-      // Create image and wait for it to load
+      // Create image and wait for it to load using imported image
       const img = new Image();
       await new Promise<void>((resolve, reject) => {
         img.onload = () => {
@@ -123,7 +120,7 @@ export async function generateCapabilityStatementPDF(data: CapabilityStatementDa
           resolve();
         };
         img.onerror = () => reject(new Error("Failed to load image"));
-        img.src = URL.createObjectURL(blob);
+        img.src = logoImage;
       });
       
       // Convert canvas to JPEG (which jsPDF handles better than PNG)
